@@ -16,39 +16,52 @@ font-family: Arial, sans-serif;
 /* HERO SECTION */
 .hero{
 height:100vh;
-background: url('pajama.png') center/cover no-repeat;
+background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+url('https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a');
+background-size:cover;
+background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
-position:relative;
-}
-
-.hero::after{
-content:"";
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.5);
-top:0;
-left:0;
+text-align:center;
+color:white;
 }
 
 .hero-content{
-position:relative;
-color:white;
-text-align:center;
 max-width:700px;
 padding:20px;
 }
 
 .hero h1{
 font-size:42px;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .hero p{
 font-size:18px;
+margin-bottom:25px;
 line-height:1.6;
+}
+
+/* BUTTONS */
+.buttons{
+margin-top:20px;
+}
+
+.button{
+display:inline-block;
+margin:10px;
+padding:14px 25px;
+background:white;
+color:black;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.button:hover{
+background:#ddd;
 }
 
 /* SECTION */
@@ -58,13 +71,13 @@ text-align:center;
 }
 
 .section h2{
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
 /* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
 gap:20px;
 max-width:1000px;
 margin:auto;
@@ -74,6 +87,7 @@ margin:auto;
 position:relative;
 overflow:hidden;
 border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 .card img{
@@ -86,30 +100,11 @@ object-fit:cover;
 position:absolute;
 bottom:10px;
 left:10px;
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.7);
 color:white;
-padding:6px 10px;
+padding:6px 12px;
 border-radius:5px;
-}
-
-/* BUTTONS */
-.buttons{
-margin-top:30px;
-}
-
-.button{
-display:inline-block;
-margin:10px;
-padding:14px 25px;
-background:black;
-color:white;
-text-decoration:none;
-border-radius:6px;
-transition:0.3s;
-}
-
-.button:hover{
-background:#333;
+font-size:14px;
 }
 
 /* FOOTER */
@@ -128,52 +123,15 @@ text-align:center;
 <!-- HERO -->
 <section class="hero">
 <div class="hero-content">
+
 <h1>Srijman Enterprises</h1>
+
 <p>
-Affordable everyday products including kids clothing, fashion accessories,
+Affordable everyday products across fashion accessories, kids clothing,
 household essentials and kitchen items.
 </p>
-</div>
-</section>
 
-<!-- ABOUT -->
-<section class="section">
-<h2>About Us</h2>
-<p style="max-width:700px;margin:auto;">
-Srijman Enterprises is an online retail brand offering a variety of affordable everyday products including fashion accessories, hair accessories, kids’ clothing, household essentials, and kitchen items.
-We proudly serve customers across India through Amazon and Meesho.
-</p>
-</section>
-
-<!-- CATEGORIES -->
-<section class="section">
-<h2>Our Products</h2>
-
-<div class="grid">
-
-<div class="card">
-<img src="kids.png">
-<span>Kids Clothing</span>
-</div>
-
-<div class="card">
-<img src="bangles1.jpg">
-<span>Fashion Accessories</span>
-</div>
-
-<div class="card">
-<img src="kitchen.jpg">
-<span>Kitchen & Home</span>
-</div>
-
-</div>
-
-</section>
-
-<!-- LINKS -->
-<section class="section">
-<h2>Shop With Us</h2>
-
+<!-- SHOP LINKS ON TOP -->
 <div class="buttons">
 
 <a class="button" href="https://www.amazon.in/storefront?me=A3JMVAMUPDKBDU&ref_=ssf_share" target="_blank">
@@ -187,6 +145,41 @@ Meesho Store
 <a class="button" href="https://www.instagram.com/srijmanent/" target="_blank">
 Instagram
 </a>
+
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+<h2>About Us</h2>
+<p style="max-width:700px;margin:auto;">
+Srijman Enterprises is an online retail brand offering a variety of affordable everyday products including fashion accessories, hair accessories, kids’ clothing, household essentials, and kitchen items.
+We proudly serve customers across India through leading e-commerce platforms like Amazon and Meesho, focusing on quality, value, and customer satisfaction.
+</p>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section">
+<h2>Our Categories</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="kids.png">
+<span>Kids Clothing & Essentials</span>
+</div>
+
+<div class="card">
+<img src="bangles1.jpg">
+<span>Fashion & Hair Accessories</span>
+</div>
+
+<div class="card">
+<img src="kitchen.jpg">
+<span>Home & Kitchen Products</span>
+</div>
 
 </div>
 
