@@ -13,35 +13,32 @@ box-sizing:border-box;
 font-family: Arial, sans-serif;
 }
 
+/* Collage Background */
 body{
-height:100vh;
-overflow:hidden;
+min-height:100vh;
+background:
+url('pajama.png') top left / 33% 50% no-repeat,
+url('kids.png') top center / 33% 50% no-repeat,
+url('bangles1.jpg') top right / 34% 50% no-repeat,
+url('bangles2.jpg') bottom left / 33% 50% no-repeat,
+url('kitchen.jpg') bottom center / 33% 50% no-repeat,
+url('pajama.png') bottom right / 34% 50% no-repeat;
+background-attachment: fixed;
 }
 
-/* Background Slideshow */
-.bg{
+/* Overlay (to reduce harsh colors) */
+body::before{
+content:"";
 position:fixed;
-width:100%;
-height:100%;
 top:0;
 left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.35);
 z-index:-1;
-background-size:cover;
-background-position:center;
-animation:slide 25s infinite;
 }
 
-/* Change images here */
-@keyframes slide{
-0%{background-image:url('pajama.png');}
-20%{background-image:url('kids.png');}
-40%{background-image:url('bangles1.jpg');}
-60%{background-image:url('bangles2.jpg');}
-80%{background-image:url('kitchen.jpg');}
-100%{background-image:url('pajama.png');}
-}
-
-/* Glass Card */
+/* Glass Container */
 .container{
 position:absolute;
 top:50%;
@@ -106,8 +103,6 @@ opacity:0.8;
 </head>
 
 <body>
-
-<div class="bg"></div>
 
 <div class="container">
 
