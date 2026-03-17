@@ -6,63 +6,108 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-body{
-font-family: Arial, Helvetica, sans-serif;
-background:#f4f6f8;
+*{
 margin:0;
 padding:0;
-text-align:center;
+box-sizing:border-box;
+font-family: Arial, sans-serif;
 }
 
+body{
+height:100vh;
+overflow:hidden;
+}
+
+/* Background Slideshow */
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+z-index:-1;
+background-size:cover;
+background-position:center;
+animation:slide 25s infinite;
+}
+
+/* Change images here */
+@keyframes slide{
+0%{background-image:url('pajama.png');}
+20%{background-image:url('kids.png');}
+40%{background-image:url('bangles1.jpg');}
+60%{background-image:url('bangles2.jpg');}
+80%{background-image:url('kitchen.jpg');}
+100%{background-image:url('pajama.png');}
+}
+
+/* Glass Card */
 .container{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:90%;
 max-width:700px;
-margin:60px auto;
-background:white;
 padding:40px;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+
+background:rgba(255,255,255,0.15);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+
+border-radius:15px;
+box-shadow:0 8px 32px rgba(0,0,0,0.3);
+
+text-align:center;
+color:white;
 }
 
+/* Heading */
 h1{
-margin-bottom:10px;
+margin-bottom:15px;
+font-size:32px;
 }
 
+/* Text */
 p{
 line-height:1.6;
-color:#444;
+margin-bottom:15px;
 }
 
+/* Buttons */
 .buttons{
-margin-top:30px;
+margin-top:25px;
 }
 
 .button{
 display:block;
 margin:10px auto;
 padding:14px;
-width:250px;
-background:#222;
+width:260px;
+background:rgba(0,0,0,0.6);
 color:white;
 text-decoration:none;
-border-radius:6px;
-font-weight:bold;
-transition:0.2s;
+border-radius:8px;
+transition:0.3s;
 }
 
 .button:hover{
-background:#444;
+background:black;
+transform:scale(1.05);
 }
 
+/* Footer */
 .footer{
-margin-top:30px;
-font-size:14px;
-color:#777;
+margin-top:20px;
+font-size:13px;
+opacity:0.8;
 }
-
 </style>
 </head>
 
 <body>
+
+<div class="bg"></div>
 
 <div class="container">
 
@@ -79,21 +124,21 @@ We proudly serve customers across India through leading e-commerce platforms suc
 <div class="buttons">
 
 <a class="button" href="https://www.amazon.in/storefront?me=A3JMVAMUPDKBDU&ref_=ssf_share" target="_blank">
-Visit Our Amazon Store
+Amazon Store
 </a>
 
 <a class="button" href="https://www.meesho.com/SrijmanEnterprises?ms=2" target="_blank">
-Shop on Meesho
+Meesho Store
 </a>
 
 <a class="button" href="https://www.instagram.com/srijmanent/" target="_blank">
-Follow us on Instagram
+Instagram
 </a>
 
 </div>
 
 <div class="footer">
-<p>© 2026 Srijman Enterprises</p>
+© 2026 Srijman Enterprises
 </div>
 
 </div>
